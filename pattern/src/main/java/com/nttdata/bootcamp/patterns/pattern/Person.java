@@ -32,6 +32,7 @@ public class Person implements IPrototype,IPersonInterface,IPersonProxyInterface
 	}
 	
 	//METODO PARA CLONAR EL OBJETO PROTOTYPE
+	//nuevo espacio de memoria 
 	@Override
 	public Person clone() {
 		Person p = new Person(this.name, this.age);
@@ -39,6 +40,7 @@ public class Person implements IPrototype,IPersonInterface,IPersonProxyInterface
 	}
 	
 	//CREAR OBJETO CON EL PATRON BUILDER
+	//constructor rapido
 	private Person(PersonBuilder personBuilder) {
         super();
         this.name = personBuilder.name;
